@@ -1,3 +1,5 @@
+from Modulos.Telas import Telas # pegar o arquivo Telas e importar a classer 
+
 class Usuario: #nome de class precisa ser com letras maiúscula
 
   """Documentação da classe no Python
@@ -22,7 +24,10 @@ class Usuario: #nome de class precisa ser com letras maiúscula
   # self refere-se à instância da classe
   # é o self é obrigatorio de a função/método está dentro de uma classe
   def __init__( self ):
-
+    #chamando a tela de entrada que está no módulo Telas.py
+    entrada = Telas() # instância da classe é criar um objeto
+    entrada.entradaSistema()
+    
     self.logar() # chamando o método logar da classe
 
     # 'print( "Executado automaticamente" )'
@@ -45,10 +50,10 @@ class Usuario: #nome de class precisa ser com letras maiúscula
   # se o def estiver fora da classe não precisa colocar o self
   def exibirInf(self):
     print("Mostra os dados do usuário são: \nNome: \nLogin: ")
-  def mostraMen(self, mensagem):
+  #def mostraMen(self, mensagem):
     """ Exibe as mensagens enviadas pelo parâmetro.
     """
-    print(f"------------------------- \n |   {mensagem}   \n -------------------------")
+    #print(f"------------------------- \n |   {mensagem}   \n -------------------------")
 
 # Uma classe convencional precisa ser Instanciada para que seus objetos possam ser usados.
 # Instanciar uma classe é colocar uma cópia ( instância ) em uma variável ( objeto )

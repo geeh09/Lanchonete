@@ -8,3 +8,4 @@ from Modulos.Usuario import Usuario
 # usuario é o nome da classe, modulos(pasta).Usuario(arquivo)
 
 usuario = Usuario()
+

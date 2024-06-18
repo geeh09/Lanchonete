@@ -35,12 +35,26 @@ class Telas:
         print( f"        ** {mensagem} **      " )
         print( f"|                                                       |" )
         print( f"+-------------------------------------------------------+" )
- 
+
+    def menus(self):
+        print( f"+-------------------------------------------------------+" )
+        print( f"|                Escolha uma opção                      |" )
+        print( f"|                     1 Entrar                          |" )
+        print( f"|                     2 Cadastrar                       |" )
+        print( f"+-------------------------------------------------------+" )
+    
     def limpaConsole(self):
         if os.name == "nt": # quer dizer que é windows nt - Linux posix
             os.system("cls") # os é para acessar o sistema operacional
         else:
             os.system("clear")
+    def exibirMenu(self):
+        print( f"+-------------------------------------------------------+" )
+        print( f"|              Bem Vindo {usuario}                      |" )
+        print( f"        ** Menu - Escolha uma Opção: **                  " )
+        print( f"|        1 - Cadastrar                                  |" )
+        print( f"|        2 - Listar                                     |" )
+        print( f"+-------------------------------------------------------+" )
 
         # if os.name == "nt":
         #     os.system("cls")

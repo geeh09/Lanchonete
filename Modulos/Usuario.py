@@ -17,7 +17,7 @@ class Usuario: #nome de class precisa ser com letras maiúscula
       "senhaArm" : "1234",
       "nomeUsuario" : "João do Santos",
   }
-
+  tela = Telas()
   #transforma em um manual para o cliente e é só no python
   # Método e função é a mesma coisa
   # Método Construtor: executado ao instanciar a classe
@@ -25,8 +25,7 @@ class Usuario: #nome de class precisa ser com letras maiúscula
   # é o self é obrigatorio de a função/método está dentro de uma classe
   def __init__( self ):
     #chamando a tela de entrada que está no módulo Telas.py
-    entrada = Telas() # instância da classe é criar um objeto
-    entrada.entradaSistema()
+    self.tela.entradaSistema() # instância da classe é criar um objeto
     
     self.logar() # chamando o método logar da classe
 
@@ -37,19 +36,24 @@ class Usuario: #nome de class precisa ser com letras maiúscula
     self.senhaInf = input("informe a senha: ")
     #comparação - condicionais - Se - If
     #senão - else - falso
-    if self.loginInf == self.dadosUsuario["loginArm"]:
+    if self.loginInf == self.dadosUsuario["loginArm"] and self.senhaInf == self.dadosUsuario["senhaArm"]:
     # 'if self.loginInf == "cliente":' # quando é para chmara global precisa colocar o self
-     self.mostraMen("Bem vindo ao sistema ")
+     self.tela.mensagensSistema("login bem sucedido! ")
      self.exibirInf()
     else:
-      print("falha ao conectar, tente novamente")
+     self.tela.mensagensSistema("falha ao conectar, tente novamente")
+    
+     self.logar()
 
   def sair(self):
-    print("Logout do sistema")
+    self.tela.mensagensSistema("Logout do sistema")
+    self.tela.exibeMenu()
+
 
   # se o def estiver fora da classe não precisa colocar o self
-  def exibirInf(self):
-    print("Mostra os dados do usuário são: \nNome: \nLogin: ")
+  
+  # def exibirInf(self):
+  #   self.tela.mensagensSistema ("Mora os dados do usuário são: \nNome: st\nLogin: ")
   #def mostraMen(self, mensagem):
     """ Exibe as mensagens enviadas pelo parâmetro.
     """

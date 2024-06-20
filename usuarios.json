@@ -1,0 +1,10 @@
+[
+ {"loginArm" : "cliente",
+  "senhaArm" : "1234",
+  "nomeUsuario" : "João do Santos"
+ },
+ {"loginArm" : "cliente2",
+  "senhaArm" : "1234",
+  "nomeUsuario" : "Maria da Silva"
+ }
+]
